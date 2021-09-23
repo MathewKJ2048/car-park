@@ -1,1 +1,36 @@
 This file contains the plans for the outline of the project as a whole
+
+
+Key features:
+
+	1) Should contain Lot_Id
+
+	    The Lot_Id should be a String and should have a format like this:
+		F1SE _ _ _
+		F2MN_ _ _ _
+		F2LE_ _ _ _
+
+		F1 denotes Floor 1
+		next character denotes lot-size like, S-> small, M-> medium and L-> large.
+		E denotes electric car, N denotes a non-elctric one.
+
+		This way, the user can easily understand where exactly he needs to park his car. Also, the at the time of billing, the person-in-charge/ info-portal can easily know if it's an electric car and thus further rates need to be appied or not(apart from normal parking fee).
+
+		We can maintain a hashmap with indices as F1, F2, F3 to store how many spots are available for use at each floor.
+		Similarly we can maintain a hashmap with indices S, M, L.
+		The above Lot_id format would let the manager easily update the values in these hashmaps.
+
+
+
+	2) Should have:
+
+	i)	 vehicle owner's name
+	ii)  issue time
+	iii) License no. of vehicle
+
+	3)When user comes back to take away the vehicle, the ticket should be updated by adding the end-time(can't think of some other word presently :) ).
+
+	Note: The payment n other related stuff can be managed seperately under Bill.
+*/
+}
+

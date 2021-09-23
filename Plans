@@ -56,6 +56,10 @@ bill:
 
 //Hashmap need to be updated upon leaveing the lot
 //updated after lot is assigned
+A lot is assumed to be "booked" as soon as a ticket for it is issued
+thus it is assumed to be filled even if there is no car parked in it
+
+suggestion: let ticket have the lot id, and lot should check the ticket is correct before accepting it
 
 electric_lot:
 1)electric lot is simply a special type of lot

@@ -40,3 +40,30 @@ Key features:
 */
 }
 
+ticket class works properly
+each vehicle generates it's own ticket
+each Lot accepts a ticket:
+prevented multiple parking in same Lot
+
+exits and entrances:
+assign random exits
+
+bill:
+1)Bill class is used to generate unique bill objects
+2)one-one map between tickets and bills
+3)ticket records entry
+4)bill records exit
+
+//Hashmap need to be updated upon leaveing the lot
+//updated after lot is assigned
+
+electric_lot:
+1)electric lot is simply a special type of lot
+2)inherits from Lot
+3)extra feature: object of class electric panel
+
+electric lot:
+1)logic written to calculalte
+2)rate of power, rate per unit watt
+
+

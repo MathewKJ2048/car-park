@@ -39,7 +39,8 @@ public class Electric_Panel
         {
             long ontime = log.get(i);
             long offtime = log.get(i+1);
-            if(ontime >= end && offtime>=end)break;
+            if(ontime>=end && offtime>=end)break;
+            else if(ontime<=start && offtime<=start)continue;
             else if(ontime>=start&&offtime<=end)time+=offtime-ontime;
             else if(ontime>=start&&offtime>end){time+=-ontime+end;break;}
             else if(ontime<start&&offtime<=end)time+=offtime-start;

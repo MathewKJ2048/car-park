@@ -29,7 +29,7 @@ public class Bill {
         else if(hours>1 && hours<=3)
             cost=20+(hours-1)*10;
         else
-            cost=40+(hours-4)*5;
+            cost=40+(hours-3)*5;
         return cost;
 
     }

@@ -11,6 +11,9 @@ public class Ticket {
     public Date CurrentDate;
     private SimpleDateFormat currDate;
     private int entry_point;
+    static int n;
+    public static String s;
+    //The value of n to be entered by manager and value of s can be obtained from get_info function of slot_size class.
 
     public Ticket(String name, String registration_number,int entry_point){
         this.name=name;
@@ -51,7 +54,7 @@ public class Ticket {
         // indices: F1ME thus there will be n*3*2 = 6n keys
 
 
-        String s=""; //has the type: S, M or L.
+      
         for(int i=1;i<=n;i++)
         {
             form+=Integer.toString(i);

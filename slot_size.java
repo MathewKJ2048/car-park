@@ -38,7 +38,7 @@ public slot_size(int dimensions[]){
 
 
 //this method is for getting the slot_size; S,M or L
-	public static void get_info(Scanner sc){
+	public static String get_info(Scanner sc){
 
 
 		System.out.println("What type of vehicle is it?\n Enter the value(1/2/3/4) under which the vehcile can be clasified\n 1) scooter/motor-cycle/bi-cycle/scooty\n 2) car/van/auto-rickshaw\n 3) truck/loader\n 4) others");
@@ -64,18 +64,14 @@ public slot_size(int dimensions[]){
     		case 3:
     		slot_req="L";
     		break;
-    	}
-    	System.out.println("Slot type: "+slot_req);
-	}
-
-
-
-
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		slot_size ob=new slot_size();
-		
-		get_info(sc);
+    	}		
+	sc.nextLine();
+    	System.out.println("Is it an electric vehicle? y/n");
+    	String inp=sc.nextLine();
+    	if(inp.equalsIgnoreCase("y"))
+    		slot_req+="E";
+    	else slot_req+="N";
+    	return slot_req;
 	}
 
 }

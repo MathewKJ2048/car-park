@@ -7,14 +7,17 @@ public class Bill {
     private Date Exit_Date;
     private SimpleDateFormat Exit_Date_formatted;
     int exit_point;
+    long charging_time;
+    static double cost_of_electricity_per_hour=10d;
     Ticket v;
-    Bill(Ticket v){
+    Bill(Ticket v,long charging_time){ //enter the charging time in milli-seconds
         exit_time = System.currentTimeMillis();
         Exit_Date = new Date();
         Exit_Date_formatted = new SimpleDateFormat("d MMM yyyy HH:mm:ss");
         this.v=v;
         Random rand = new Random();
         this.exit_point=1+rand.nextInt(4);
+        this.charging_time=charging_time;
     }
     private String getExit_time(){
         return Exit_Date_formatted.format(Exit_Date);
@@ -30,8 +33,13 @@ public class Bill {
             cost=20+(hours-1)*10;
         else
             cost=40+(hours-3)*5;
+        
+        cost=cost+(cost_of_electricity_per_hour*(charging_time/3_600_000));
         return cost;
 
+    }
+    public void ChangeCostPerHour(double d){
+        cost_of_electricity_per_hour=d;
     }
     public void DisplayBill(){
         Date temp1= new Date();

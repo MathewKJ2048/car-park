@@ -34,7 +34,7 @@ public class Bill {
         else
             cost=40+(hours-3)*5;
         
-        cost=cost+(cost_of_electricity_per_hour*(charging_time/3_600_000));
+        cost=cost+(cost_of_electricity_per_hour*((double)(charging_time/3_600_000)));
         return cost;
 
     }

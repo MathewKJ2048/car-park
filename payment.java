@@ -7,13 +7,17 @@ class Payment
 	private final double number;
 	private final String currency;
 	private final String method;
-	public Payment(String source,String recipient,double number,String currency,String method)
+	private final String code;
+	private final long time;
+	public Payment(String source,String recipient,double number,String currency,String method,String code)
 	{
 		this.source = source;
 		this.recipient = recipient;
 		this.number = number;
 		this.currency = currency;
 		this.method = method;
+		this.code = code;
+		this.time = System.currentTimeMillis();
 	}
 	
 	public String getSource()
@@ -36,6 +40,10 @@ class Payment
 	{
 		return method;
 	}
+	public long getTime()
+	{
+	    return this.time;
+        }
 }
 
 

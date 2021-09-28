@@ -10,32 +10,25 @@ public class Electric_Panel
         this.is_on = false;
         this.log = new ArrayList<Long>();
     }
-    
+    //
     public boolean get_state()
     {
         return this.is_on;
     }
-    
+    //
     public void ON()
     {
-        if(this.is_on)
-        {
-            System.out.println("The switch is already on!");
-            return;
-        }
+        if(this.is_on)return;
         this.is_on = true;
         this.log.add(System.currentTimeMillis());
     }
     public void OFF()
     {
-        if(!this.is_on){
-            System.out.println("The switch is already off!");
-            return;
-        }
+        if(!this.is_on)return;
         this.is_on = true;
         this.log.add(System.currentTimeMillis());
     }
-    
+    //
     public long time_used(long start, long end)
     {
         if(start>end || end>System.currentTimeMillis())return -1;

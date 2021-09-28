@@ -1,5 +1,3 @@
-
-
 class Payment
 {
 	private final String source;
@@ -45,19 +43,3 @@ class Payment
 	    return this.time;
         }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

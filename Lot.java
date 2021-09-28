@@ -1,25 +1,27 @@
 
 public class Lot
 {
+    private final int dimensions[] ;
     private boolean is_full;
-    Vehicle vehicle_in_lot;
-    Electric_Panel e;
-    public void assign_vehicle(Vehicle v){
-        this.vehicle_in_lot=v;
-        if(vehicle_in_lot.getSlot_id().charAt(3)=='E')
-            e = new Electric_Panel();
+    private String registration_number;//registration number of vehicle currently parked
+    Lot(int dimensions[])
+    {
+        this.dimensions = dimensions;
+        is_full = false;
+        this.registration_number = "";
     }
-    Lot(){
-        is_full=false;
-
+    public boolean park(Ticket t)
+    {
+        if(this.is_full)return false;
+        is_full = true;
+        this.registration_number = t.getReg_no();
+        return true;
     }
-
-    public void setIs_full(){
-        if(is_full==false)
-            is_full=true;
-    }
-
-    public boolean isIs_full() {
-        return is_full;
+    public boolean leave()
+    
+    {
+        if(!this.is_full)return false;
+        this.registration_number = "";
+        return true;
     }
 }

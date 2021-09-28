@@ -1,29 +1,13 @@
 
 
-class payment
+class Payment
 {
-	String to;
-	String from;
-	String date;
-	double authenticationcode;
-	double numb;
-	double unit;
-	
-	payment(String TO, String FROM,String Date,double code,double Numb,double Unit)throws Exception
-	{
-		to = TO;
-		from = FROM;
-		date = Date;
-		authenticationcode = code;
-		numb = Numb;
-		unit = Unit;
-	}
-	private String source;
-	private String recipient;
-	private double number;
-	private String currency;
-	private String method;
-	public void pay(String source,String recipient,double number,String currency,String method)
+	private final String source;
+	private final String recipient;
+	private final double number;
+	private final String currency;
+	private final String method;
+	public Payment(String source,String recipient,double number,String currency,String method)
 	{
 		this.source = source;
 		this.recipient = recipient;

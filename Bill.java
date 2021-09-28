@@ -33,7 +33,7 @@ public class Bill {
     private double CalcCost(){
         long initial_time=v.entry_time;
         long time_used= (exit_time-initial_time);
-        double hours= (double)(time_used/3_600_000);
+        double hours= (double)(time_used/3_600_000d);
         double cost;
         if(hours<=1)
             cost=hours*20;
@@ -42,7 +42,7 @@ public class Bill {
         else
             cost=40+(hours-4)*5;
 
-        cost=cost+(rateperhour*(charging_time_used/3_600_000));
+        cost=cost+(rateperhour*(charging_time_used/3_600_000d));
         return cost;
 
     }
@@ -64,7 +64,8 @@ public class Bill {
         System.out.println("EXIT POINT: EXIT GATE"+exit_point);
         System.out.println("FROM: "+v.Display_Date());
         System.out.println("TO: "+getExit_time());
-        System.out.println("Paid: "+CalcCost());
+        System.out.printf("Paid:%.3f ",CalcCost());
+        System.out.println();
         System.out.println("----------------------------");
         System.out.println("        Thank You!");
 

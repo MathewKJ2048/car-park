@@ -10,7 +10,6 @@ public class Bill {
     Ticket v;
     long charging_time_used;
     static double rateperhour=10d;
-
     public static void setRateperhour(double rateperhour) {
         Bill.rateperhour = rateperhour;
     }

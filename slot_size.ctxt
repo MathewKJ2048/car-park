@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=slot_size
+comment1.params=type\ l_or_b\ dimension
+comment1.target=void\ change_dimension(java.lang.String,\ java.lang.String,\ int)
+comment2.params=sc
+comment2.target=int\ other(java.util.Scanner)
+comment3.params=sc
+comment3.target=java.lang.String\ get_info(java.util.Scanner)
+numComments=4

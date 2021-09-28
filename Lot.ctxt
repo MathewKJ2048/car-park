@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Lot
+comment1.params=v
+comment1.target=void\ assign_vehicle(Vehicle)
+comment2.params=
+comment2.target=Lot()
+comment3.params=
+comment3.target=void\ setIs_full()
+comment4.params=
+comment4.target=boolean\ isIs_full()
+numComments=5

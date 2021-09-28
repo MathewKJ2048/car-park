@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Payment
+comment1.params=source\ recipient\ number\ currency\ method\ code
+comment1.target=Payment(java.lang.String,\ java.lang.String,\ double,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getSource()
+comment3.params=
+comment3.target=java.lang.String\ getCode()
+comment4.params=
+comment4.target=java.lang.String\ getRecipient()
+comment5.params=
+comment5.target=double\ getNumber()
+comment6.params=
+comment6.target=java.lang.String\ getCurrency()
+comment7.params=
+comment7.target=java.lang.String\ getMethod()
+comment8.params=
+comment8.target=long\ getTime()
+numComments=9

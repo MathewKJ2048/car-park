@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Bill
+comment1.params=rateperhour
+comment1.target=void\ setRateperhour(double)
+comment2.params=
+comment2.target=Bill()
+comment3.params=v\ charging_time_used
+comment3.target=Bill(Ticket,\ long)
+comment4.params=
+comment4.target=java.lang.String\ getExit_time()
+comment5.params=
+comment5.target=double\ CalcCost()
+comment6.params=d
+comment6.target=void\ changecost_per_hour(double)
+comment7.params=
+comment7.target=void\ DisplayBill()
+numComments=8

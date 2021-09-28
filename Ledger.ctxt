@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Ledger
+comment1.params=
+comment1.target=Ledger()
+comment2.params=source\ recipient\ number\ currency\ method\ code
+comment2.target=void\ make_payment(java.lang.String,\ java.lang.String,\ double,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=Payment\ get_last_payment()
+comment4.params=
+comment4.target=java.util.List\ get_all_payments()
+numComments=5

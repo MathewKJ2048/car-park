@@ -6,6 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean IsRunning = true;
         boolean manager_function =true;
+        
        Parking_Lot plot=new Parking_Lot();
         ArrayList<Vehicle> vehicles = new ArrayList<>();
         ArrayList<Ticket> tickets = new ArrayList<>();
@@ -56,7 +57,8 @@ public class Main {
             System.out.println("3.Manager settings");
             System.out.println("4.Charge your electric vehicle");
             System.out.println("5.View the free parking lot");
-            System.out.println("6.Exit");
+            System.out.println("6.Make a payment");
+            System.out.println("7.Exit");
             int inp= scanner.nextInt();
             scanner.nextLine();
             for(int k=0;k<plot.getNo_of_floors();k++){
@@ -385,9 +387,34 @@ public class Main {
                     }
                         break;
                 case 6:
+                   {
+                       System.out.println("Enter recipient:");
+                       String r = scanner.next();
+                       System.out.println("Enter source:");
+                       String s = scanner.next();
+                       System.out.println("Enter number of units:");
+                       double n = scanner.nextDouble();
+                       System.out.println("Enter unit:");
+                       String u = scanner.next();
+                       System.out.println("Enter payment method:");
+                       String m = scanner.next();
+                       System.out.println("Enter authentication code:");
+                       String c = scanner.next();
+                       plot.l.make_payment(s,r,n,u,m,c);
+                       System.out.println("Payment successful!");
+                       System.out.println("Details:");
+                       Payment p = plot.l.get_last_payment();
+                       System.out.println("Source:"+p.getSource());
+                       System.out.println("Recipient:"+p.getRecipient());
+                       System.out.println("amount :"+p.getNumber()+" "+p.getCurrency());
+                       System.out.println("time: "+p.getTime()+" milliseconds since EPOCH");
+                   }
+                   break;
+                case 7:
                     IsRunning=false;
                     break;
-
+                default:
+                    System.out.println("Invalid choice");
             }
         }
 

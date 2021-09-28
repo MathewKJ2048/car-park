@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Parking_Lot
+comment1.params=
+comment1.target=Parking_Lot()
+comment2.params=no_of_floors
+comment2.target=void\ initialise(int)
+comment3.params=NoOfFloors
+comment3.target=void\ setNo_of_floors(int)
+comment4.params=
+comment4.target=int\ getNo_of_floors()
+numComments=5

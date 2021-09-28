@@ -3,39 +3,46 @@ import java.util.ArrayList;
 
 public class Electric_Panel
 {
-    private boolean is_on;//true if panel is being used, false otherwise
+    private boolean is_on;
     List<Long> log;//first entry in log is on time in milliseconds, unix epoch
     Electric_Panel()
     {
         this.is_on = false;
         this.log = new ArrayList<Long>();
     }
-    //
-    public boolean get_state()//returns state of socket
+    
+    public boolean get_state()
     {
         return this.is_on;
     }
-    //
-    public void ON()//switches on the socket, if it is not already on
+    
+    public void ON()
     {
-        if(this.is_on)return;
+        if(this.is_on)
+        {
+            System.out.println("The switch is already on!");
+            return;
+        }
         this.is_on = true;
-        this.log.add(System.currentTimeMillis());//time is logged
+        this.log.add(System.currentTimeMillis());
     }
-    public void OFF()//switches off the socket, if it is not already on
+    public void OFF()
     {
-        if(!this.is_on)return;
+        if(!this.is_on){
+            System.out.println("The switch is already off!");
+            return;
+        }
         this.is_on = true;
-        this.log.add(System.currentTimeMillis());//time is logged
+        this.log.add(System.currentTimeMillis());
     }
-    //
-    public long time_used(long start, long end)//counts the number of milliseconds for which the socket was in operation
+    
+    public long time_used(long start, long end)
     {
-        if(start>end || end>System.currentTimeMillis())return -1;//future cannot be predicted
-        List<Long> log = new ArrayList<Long>(this.log);//creates a copy of log with an imaginary switchoff at end, so number of entries guaranteed to be even
+        if(start>end || end>System.currentTimeMillis())return -1;
+        List<Long> log = new ArrayList<Long>(this.log);
         if(this.is_on)log.add(System.currentTimeMillis());
         long time=0;
-        for(int i=0;i<log.size();i+=2)//looks at how many milliseconds in each on-off chunk falls between start and end
+        for(int i=0;i<log.size();i+=2)
         {
             long ontime = log.get(i);
             long offtime = log.get(i+1);

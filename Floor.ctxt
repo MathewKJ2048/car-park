@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Floor
+comment1.params=max_Small_lot
+comment1.target=void\ setMax_Small_lot(int)
+comment2.params=max_medium_lot
+comment2.target=void\ setMax_medium_lot(int)
+comment3.params=max_large_lot
+comment3.target=void\ setMax_large_lot(int)
+comment4.params=
+comment4.target=int\ getMax_Small_lot()
+comment5.params=
+comment5.target=int\ getMax_medium_lot()
+comment6.params=
+comment6.target=int\ getMax_large_lot()
+comment7.params=
+comment7.target=Floor()
+comment8.params=
+comment8.target=void\ initialiselots()
+numComments=9

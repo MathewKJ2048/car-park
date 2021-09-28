@@ -13,9 +13,11 @@ public class Ticket {
     private int entry_point;
     static int n;
     public static String s;
+    protected boolean iselectric;
+    public Vehicle v;
     //The value of n to be entered by manager and value of s can be obtained from get_info function of slot_size class.
 
-    public Ticket(String name, String registration_number,int entry_point){
+    public Ticket(String name, String registration_number,int entry_point,Vehicle v){
         this.name=name;
         this.registration_number=registration_number;
         count++;
@@ -23,6 +25,8 @@ public class Ticket {
         CurrentDate = new Date();
         currDate = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
         this.entry_point=entry_point;
+        //this.iselectric=iselectric;
+        this.v=v;
     }
     public int getEntryPoint(){
         return this.entry_point;
@@ -45,6 +49,7 @@ public class Ticket {
     }
 
 
+
     public static void update_info(){
 
         HashMap<String,Integer> hm = new HashMap<>();
@@ -54,7 +59,7 @@ public class Ticket {
         // indices: F1ME thus there will be n*3*2 = 6n keys
 
 
-      
+
         for(int i=1;i<=n;i++)
         {
             form+=Integer.toString(i);
@@ -66,5 +71,6 @@ public class Ticket {
                 break;
             }
         }
+
     }
 }
